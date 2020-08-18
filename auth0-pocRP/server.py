@@ -87,7 +87,7 @@ def callback_handling():
 
 @app.route('/login')
 def login():
-    return auth0.authorize_redirect(redirect_uri=AUTH0_CALLBACK_URL, audience='my-api')
+    return auth0.authorize_redirect(redirect_uri=AUTH0_CALLBACK_URL, audience='https://my-api')
 
 
 @app.route('/logout')
