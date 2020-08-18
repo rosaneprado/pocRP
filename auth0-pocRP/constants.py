@@ -3,7 +3,5 @@ AUTH0_CLIENT_SECRET = 'zrLy6cN_YN2RwM9JUMqChIqTcfJZlignALBXTROg8XMptngF2rIwrSRvw
 AUTH0_CALLBACK_URL = 'https://pocpy.herokuapp.com/callback'
 AUTH0_DOMAIN = 'dev-psgi167i.us.auth0.com'
 AUTH0_AUDIENCE = 'https://dev-psgi167i.us.auth0.com'
-PROFILE_KEY = 'profile'
-SECRET_KEY = 'ZwqFHeUqrcA4KNZuCvp9QTvhJ6AOrcnd_kDN1a8ORSU5K8_OIr_wCTgIVyRbAASt'
-JWT_PAYLOAD = 'jwt_payload'
+
 
