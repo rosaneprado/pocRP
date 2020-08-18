@@ -3,5 +3,4 @@ AUTH0_CLIENT_SECRET = 'zrLy6cN_YN2RwM9JUMqChIqTcfJZlignALBXTROg8XMptngF2rIwrSRvw
 AUTH0_CALLBACK_URL = 'https://pocpy.herokuapp.com/callback'
 AUTH0_DOMAIN = 'dev-psgi167i.us.auth0.com'
 AUTH0_AUDIENCE = 'https://dev-psgi167i.us.auth0.com/api/v2/'
-SECRET_KEY = 'zrLy6cN_YN2RwM9JUMqChIqTcfJZlignALBXTROg8XMptngF2rIwrSRvwLwQDoIz'
 JWT_PAYLOAD = 'jwt_payload'
