@@ -25,8 +25,8 @@ if ENV_FILE:
 #AUTH0_CLIENT_ID = env.get(constants.AUTH0_CLIENT_ID)
 #AUTH0_CLIENT_SECRET = env.get(constants.AUTH0_CLIENT_SECRET)
 #AUTH0_DOMAIN = env.get(constants.AUTH0_DOMAIN)
-#AUTH0_BASE_URL = 'https://dev-psgi167i.us.auth0.com'
 
+AUTH0_BASE_URL = 'https://dev-psgi167i.us.auth0.com'
 AUTH0_CLIENT_ID = 'aBGU78bNDSbSe4eGzZXqN9isMHuf4jl8'
 AUTH0_CLIENT_SECRET = 'zrLy6cN_YN2RwM9JUMqChIqTcfJZlignALBXTROg8XMptngF2rIwrSRvwLwQDoIz'
 AUTH0_CALLBACK_URL = 'https://pocpy.herokuapp.com/callback'
