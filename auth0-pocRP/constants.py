@@ -1,5 +1,5 @@
 AUTH0_CLIENT_ID = 'aBGU78bNDSbSe4eGzZXqN9isMHuf4jl8'
 AUTH0_CLIENT_SECRET = 'zrLy6cN_YN2RwM9JUMqChIqTcfJZlignALBXTROg8XMptngF2rIwrSRvwLwQDoIz'
-AUTH0_CALLBACK_URL = 'https://nameless-harbor-50393.herokuapp.com'
+AUTH0_CALLBACK_URL = 'https://pocpy.herokuapp.com/callback'
 AUTH0_DOMAIN = 'dev-psgi167i.us.auth0.com'
 JWT_PAYLOAD = 'jwt_payload'
