@@ -27,6 +27,13 @@ if ENV_FILE:
 #AUTH0_DOMAIN = env.get(constants.AUTH0_DOMAIN)
 #AUTH0_BASE_URL = 'https://dev-psgi167i.us.auth0.com'
 
+AUTH0_CLIENT_ID = 'aBGU78bNDSbSe4eGzZXqN9isMHuf4jl8'
+AUTH0_CLIENT_SECRET = 'zrLy6cN_YN2RwM9JUMqChIqTcfJZlignALBXTROg8XMptngF2rIwrSRvwLwQDoIz'
+AUTH0_CALLBACK_URL = 'https://pocpy.herokuapp.com/callback'
+AUTH0_DOMAIN = 'dev-psgi167i.us.auth0.com'
+AUTH0_AUDIENCE = 'https://dev-psgi167i.us.auth0.com/api/v2/'
+SECRET_KEY = 'ZwqFHeUqrcA4KNZuCvp9QTvhJ6AOrcnd_kDN1a8ORSU5K8_OIr_wCTgIVyRbAASt'
+
 
 app = Flask(__name__, static_url_path='/public', static_folder='./public')
 app.secret_key = constants.SECRET_KEY
