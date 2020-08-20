@@ -26,12 +26,12 @@ if ENV_FILE:
 #AUTH0_CLIENT_SECRET = env.get(constants.AUTH0_CLIENT_SECRET)
 #AUTH0_DOMAIN = env.get(constants.AUTH0_DOMAIN)
 
-AUTH0_BASE_URL = 'https://rosane-prado.us.auth0.com'
-AUTH0_CLIENT_ID = 'n3KtygrlS26rinyxfwTipmoI0o9ITCrY'
-AUTH0_CLIENT_SECRET = 'OiF7Wn1Glwl9SzBwFZq1Xjy-A7FjWxrXoO28lfsb6rQX9zeAZW6S7JOTavFqG6lL'
+AUTH0_BASE_URL = 'https://pocprado.us.auth0.com'
+AUTH0_CLIENT_ID = 'xJVZP8AVqcZKRjDowj7ik3Qico4k6HMk'
+AUTH0_CLIENT_SECRET = 'b8aJNVTytm_tQSKDXvxlME19kUQ470zLqhpCDAhFHBt3Q4CqsicySf5NCASPgvRH'
 AUTH0_CALLBACK_URL = 'https://pocpy.herokuapp.com/callback'
-AUTH0_DOMAIN = 'rosane-prado.us.auth0.com'
-AUTH0_AUDIENCE = 'https://rosane-prado.us.auth0.com/api/v2/'
+AUTH0_DOMAIN = 'pocprado.us.auth0.com'
+AUTH0_AUDIENCE = 'https://pocprado.us.auth0.com/api/v2/'
 SECRET_KEY = 'ZwqFHeUqrcA4KNZuCvp9QTvhJ6AOrcnd_kDN1a8ORSU5K8_OIr_wCTgIVyRbAASt'
 
 
