@@ -17,6 +17,9 @@ from six.moves.urllib.parse import urlencode
 
 import constants
 
+from flask import request
+from auth0.v3.authentication.token_verifier import TokenVerifier, AsymmetricSignatureVerifier
+
 ENV_FILE = find_dotenv()
 if ENV_FILE:
     load_dotenv(ENV_FILE)
@@ -77,6 +80,19 @@ def requires_auth(f):
 def home():
     return render_template('home.html')
 
+@app.route('/calc/<value1>/<value2>')
+def calc(value1, value2):
+    id_token = request.headers["Authorization"][7:]
+
+    jwks_url = 'https://{}/calc/.well-known/jwks.json'.format(constants.AUTH0_DOMAIN)
+    issuer = 'https://{}/'.format(constants.AUTH0_DOMAIN)
+
+    sv = AsymmetricSignatureVerifier(jwks_url)  # Reusable instance
+    tv = TokenVerifier(signature_verifier=sv, issuer=issuer, audience='https://pocpy.herokuapp.com/calc')
+    tv.verify(id_token)
+
+    result = int(value1) + int(value2)
+    return str(result)
 
 @app.route('/callback')
 def callback_handling():
