@@ -116,28 +116,16 @@ def home():
 def calc(value1, value2):
   
     conn = http.client.HTTPSConnection("pocprado.us.auth0.com")
-
     payload = "{\"client_id\":\"lv14yZZStAL5yNByLWF8z06sPFBYtCyq\",\"client_secret\":\"U6x3UN1t1y-lXvmhx0S5HHWo54_6D57_EPIVqd4SGrvoC3adoZBL5ySWn4tNERX_\",\"audience\":\"https://pocpy.herokuapp.com/calc\",\"grant_type\":\"client_credentials\"}"
 
     headers = { 'content-type': "application/json" }
-
     conn.request("POST", "/oauth/token", payload, headers)
-
     res = conn.getresponse()
     data = res.read()
-
     id_token = eval(data.decode("utf-8"))["access_token"]
   
-  
-  
-   
-    #id_token = request.headers["Authorization"][7:]
     jwks_url = 'https://{}/calc/.well-known/jwks.json'.format(constants.AUTH0_DOMAIN)
-    #issuer = 'https://{}/'.format(constants.AUTH0_DOMAIN)
-
-    #sv = AsymmetricSignatureVerifier(jwks_url)  # Reusable instance
-    #tv = TokenVerifier(signature_verifier=sv, issuer=issuer, audience='https://pocpy.herokuapp.com/calc')
-    #tv.verify(id_token)
+  
     verify(id_token, jwks_url)
 
     result = int(value1) + int(value2)
