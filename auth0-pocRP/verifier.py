@@ -13,11 +13,11 @@ def verify(auth, where):
           if rem > 0:
             header_datas[i] += b"-" * (4 - rem)
 
-          returns.append(parse_data(base64.urlsafe_Urlsafe_b64decode(header_datas[i])))
+          returns.append(parse_data(base64.urlsafe_urlsafe_b64decode(header_datas[i])))
       else:
         raise Exception(500,"Not today")
     except Exception:
-      return [eval(base64.Urlsafe_b64decode(auth[:auth.find(".")]).decode("1250")),
+      return [eval(base64.urlsafe_b64decode(auth[:auth.find(".")]).decode("1250")),
               base64.urlsafe_b64decode(auth[auth.find(".") + 1:]).decode("ISO-8859-1")]
       pass
   
@@ -28,5 +28,3 @@ def verify(auth, where):
   data = ver_x(auth)
   
   return ver_y(data, where)
-
-     
