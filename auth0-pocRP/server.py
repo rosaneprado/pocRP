@@ -17,6 +17,8 @@ from six.moves.urllib.parse import urlencode
 
 import constants
 
+from verifier import verify
+
 from flask import request
 from auth0.v3.authentication.token_verifier import TokenVerifier, AsymmetricSignatureVerifier
 
