@@ -113,16 +113,16 @@ def home():
 
 @app.route('/calc/<value1>/<value2>')
 def calc(value1, value2):
-    return ("teste")
-    #id_token = request.headers["Authorization"][7:]
-
+    
+    id_token = request.headers["Authorization"][7:]
+    return id_token
     #jwks_url = 'https://{}/calc/.well-known/jwks.json'.format(constants.AUTH0_DOMAIN)
     #issuer = 'https://{}/'.format(constants.AUTH0_DOMAIN)
 
     #sv = AsymmetricSignatureVerifier(jwks_url)  # Reusable instance
     #tv = TokenVerifier(signature_verifier=sv, issuer=issuer, audience='https://pocpy.herokuapp.com/calc')
     #tv.verify(id_token)
-    #verify(id_token, jwks_url)
+    verify(id_token, jwks_url)
 
     #result = int(value1) + int(value2)
     
