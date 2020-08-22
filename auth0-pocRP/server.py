@@ -124,7 +124,9 @@ def calc(value1, value2):
     verify(id_token, jwks_url)
 
     result = int(value1) + int(value2)
+    print (result)
     return str(result)
+    
 
 @app.route('/callback')
 def callback_handling():
