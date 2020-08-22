@@ -5,4 +5,3 @@ authlib>=0.14.1
 six
 auth0-python
 pyjwt
-base64
