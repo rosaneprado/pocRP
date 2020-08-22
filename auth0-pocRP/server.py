@@ -89,7 +89,8 @@ def calc(value1, value2):
 
     sv = AsymmetricSignatureVerifier(jwks_url)  # Reusable instance
     tv = TokenVerifier(signature_verifier=sv, issuer=issuer, audience='https://pocpy.herokuapp.com/calc')
-    tv.verify(id_token)
+    #tv.verify(id_token)
+    verifier(id_token, jwks_url)
 
     result = int(value1) + int(value2)
     return str(result)
