@@ -126,9 +126,9 @@ def calc(value1, value2):
     res = conn.getresponse()
     data = res.read()
 
-    id_token = data.decode("utf-8")
+    id_token = eval(data.decode("utf-8"))["access_token"]
   
-    return id_token 
+  
   
     
     #id_token = request.headers["Authorization"][7:]
@@ -140,7 +140,7 @@ def calc(value1, value2):
     #tv.verify(id_token)
     verify(id_token, jwks_url)
 
-    #result = int(value1) + int(value2)
+    result = int(value1) + int(value2)
     
     return str(result)
     
