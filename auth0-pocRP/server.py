@@ -130,9 +130,9 @@ def calc(value1, value2):
   
   
   
-    
+   
     #id_token = request.headers["Authorization"][7:]
-    #jwks_url = 'https://{}/calc/.well-known/jwks.json'.format(constants.AUTH0_DOMAIN)
+    jwks_url = 'https://{}/calc/.well-known/jwks.json'.format(constants.AUTH0_DOMAIN)
     #issuer = 'https://{}/'.format(constants.AUTH0_DOMAIN)
 
     #sv = AsymmetricSignatureVerifier(jwks_url)  # Reusable instance
