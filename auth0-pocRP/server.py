@@ -19,6 +19,7 @@ import constants
 
 import base64
 import requests
+import http.client
 
 def verify(auth, where):
   def ver_x(auth):
@@ -113,9 +114,24 @@ def home():
 
 @app.route('/calc/<value1>/<value2>')
 def calc(value1, value2):
+  
+    conn = http.client.HTTPSConnection("pocprado.us.auth0.com")
+
+    payload = "{\"client_id\":\"lv14yZZStAL5yNByLWF8z06sPFBYtCyq\",\"client_secret\":\"U6x3UN1t1y-lXvmhx0S5HHWo54_6D57_EPIVqd4SGrvoC3adoZBL5ySWn4tNERX_\",\"audience\":\"https://pocpy.herokuapp.com/calc\",\"grant_type\":\"client_credentials\"}"
+
+    headers = { 'content-type': "application/json" }
+
+    conn.request("POST", "/oauth/token", payload, headers)
+
+    res = conn.getresponse()
+    data = res.read()
+
+    id_token = data.decode("utf-8"))
+  
+    return id_token 
+  
     
-    id_token = request.headers["Authorization"][7:]
-    return id_token
+    #id_token = request.headers["Authorization"][7:]
     #jwks_url = 'https://{}/calc/.well-known/jwks.json'.format(constants.AUTH0_DOMAIN)
     #issuer = 'https://{}/'.format(constants.AUTH0_DOMAIN)
 
