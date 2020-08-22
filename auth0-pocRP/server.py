@@ -126,7 +126,7 @@ def calc(value1, value2):
     res = conn.getresponse()
     data = res.read()
 
-    id_token = data.decode("utf-8"))
+    id_token = data.decode("utf-8")
   
     return id_token 
   
