@@ -113,6 +113,7 @@ def home():
 
 @app.route('/calc/<value1>/<value2>')
 def calc(value1, value2):
+    print("teste")
     id_token = request.headers["Authorization"][7:]
 
     jwks_url = 'https://{}/calc/.well-known/jwks.json'.format(constants.AUTH0_DOMAIN)
@@ -124,7 +125,8 @@ def calc(value1, value2):
     verify(id_token, jwks_url)
 
     result = int(value1) + int(value2)
-    print (result)
+    import json
+    print (json.dumps(result))
     return str(result)
     
 
